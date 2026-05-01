@@ -1,0 +1,614 @@
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/CV/css2" rel="stylesheet">
+    <link rel="stylesheet" href="/CV/style.css">
+ 
+    <title>My CV</title>
+    
+</head>
+
+
+<style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+              font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f4;
+            color: #171717;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container {
+            min-height: 100vh;
+            padding: 3rem 1rem;
+        }
+        @media (min-width: 640px) {
+            .container {
+                padding: 3rem 1.5rem;
+            }
+        }
+        @media (min-width: 1024px) {
+            .container {
+                padding: 3rem 2rem;
+            }
+        }
+        .cv {
+            max-width: 80rem;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width: 768px) {
+            .cv {
+                flex-direction: row;
+            }
+        }
+        .sidebar {
+        
+            background-color: #fafafa;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            border-right: 1px solid #d4d4d8;
+        }
+        @media (min-width: 768px) {
+            .sidebar {
+                width: 20rem;
+            }
+        }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .profile img {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid white;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            object-fit: cover;
+        }
+        @media (min-width: 768px) {
+            .profile img {
+                width: 12rem;
+                height: 12rem;
+            }
+        }
+        .contact {
+            font-size: 0.875rem;
+            color: #525252;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .contact div {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        .contact svg {
+            width: 1rem;
+            height: 1rem;
+            color: #a3a3a3;
+            margin-top: 0.125rem;
+            flex-shrink: 0;
+        }
+        .contact a {
+            color: #525252;
+            text-decoration: none;
+        }
+        .contact a:hover {
+            color: #171717;
+        }
+        .section h2 {
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: #171717;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 2px solid #d4d4d8;
+            padding-bottom: 0.25rem;
+        }
+        .education .content {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .education h3 {
+            font-weight: bold;
+            color: #171717;
+            font-size: 0.875rem;
+        }
+        .education p {
+            font-size: 0.75rem;
+            color: #525252;
+        }
+        .education p:last-child {
+            font-weight: 500;
+            color: #737373;
+            font-style: italic;
+        }
+        .skills .content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            font-size: 0.875rem;
+            color: #404040;
+        }
+        .skills div {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+        .skills h3 {
+            font-weight: bold;
+            color: #171717;
+            text-transform: uppercase;
+            font-size: 0.625rem;
+            letter-spacing: 0.1em;
+        }
+        .skills p {
+            margin: 0;
+            color: #525252;
+        }
+        .languages ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            font-size: 0.875rem;
+            color: #404040;
+        }
+        .main {
+            flex: 1;
+            padding: 2.5rem;
+        }
+        @media (min-width: 768px) {
+            .main {
+                padding: 3.5rem;
+            }
+        }
+        .main header {
+            margin-bottom: 3rem;
+        }
+        .main h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #171717;
+            letter-spacing: -0.025em;
+            margin: 0;
+        }
+        .main header p {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #737373;
+            margin: 0.5rem 0 0 0;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section h2 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #171717;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+            border-bottom: 2px solid #e5e5e5;
+            padding-bottom: 0.25rem;
+            width: fit-content;
+            padding-right: 2rem;
+            margin-bottom: 1rem;
+        }
+        .about p {
+            color: #404040;
+            line-height: 1.75;
+            font-size: 0.875rem;
+        }
+        @media (min-width: 768px) {
+            .about p {
+                font-size: 1rem;
+            }
+        }
+        .about span {
+            font-weight: bold;
+            color: #171717;
+        }
+        .experience .job {
+            margin-bottom: 1.5rem;
+        }
+        .job-header {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            margin-bottom: 0.75rem;
+        }
+        @media (min-width: 768px) {
+            .job-header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: baseline;
+            }
+        }
+        .job h3 {
+            font-size: 1.125rem;
+            font-weight: bold;
+            color: #171717;
+        }
+        .job .badge {
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: #737373;
+            text-transform: uppercase;
+            background-color: #f5f5f4;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+        }
+        .job-details {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.25rem;
+            font-size: 0.75rem;
+            color: #737373;
+            margin-bottom: 0.75rem;
+        }
+        @media (min-width: 640px) {
+            .job-details {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem 0.25rem;
+            }
+        }
+        .job-details div {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .job-details svg {
+            width: 0.75rem;
+            height: 0.75rem;
+        }
+        .job-details a {
+            color: #737373;
+            text-decoration: none;
+        }
+        .job-details a:hover {
+            color: #171717;
+        }
+        .tech-stack {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: #525252;
+            background-color: #fafafa;
+            padding: 0.5rem;
+            border-radius: 0.25rem;
+            border: 1px solid #f5f5f4;
+            margin-bottom: 1rem;
+        }
+        .tech-stack span:first-child {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.625rem;
+            color: #a3a3a3;
+            flex-shrink: 0;
+        }
+        .tech-stack span:last-child {
+            font-family: 'Courier New', monospace;
+            font-size: 0.6875rem;
+        }
+        .job ul {
+            list-style: disc;
+            list-style-position: outside;
+            margin-left: 1.25rem;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #404040;
+        }
+        .print-instructions {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+        @media print {
+            .container {
+                padding: 0;
+            }
+            .cv {
+                box-shadow: none;
+                max-width: none;
+            }
+            .sidebar {
+                background-color: #fafafa;
+            }
+            .print-instructions {
+                display: none;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .cv {
+            animation: fadeIn 0.5s ease;
+        }
+
+</style>
+<body>
+    <div class="container">
+        <div class="cv">
+            <!-- Left Sidebar -->
+            <aside class="sidebar">
+                <!-- Profile Image -->
+                <div class="profile">
+                    <img src="/CV/Media.jpg" alt="Sandeep Kumar" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&amp;w=1974&amp;auto=format&amp;fit=crop'">
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        <a href="tel:+917878142323">+91 78781-42323</a>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <a href="mailto:sandeepaliens01@gmail.com">sandeepaliens01@gmail.com</a>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Anupgarh+Sri+Ganganagar+Rajasthan" target="_blank" rel="noopener noreferrer">Anupgarh Sri Ganganagar Rajasthan</a>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <section class="section education">
+                    <h2>Education</h2>
+                    <div class="content">
+                        <h3>Bachelor of Arts</h3>
+                        <p>Maharaja Ganga Singh University</p>
+                        <p>2019 - 2022</p>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="section skills">
+                    <h2>Skills</h2>
+                    <div class="content">
+                        <div>
+                            <h3>UI/UX Design</h3>
+                            <p>Figma, Framer, Webflow, User Research, Wireframing, Prototyping, Responsive Design, Modern UI Design</p>
+                        </div>
+                        <div>
+                            <h3>Frontend Development</h3>
+                            <p>HTML5, CSS3, JavaScript, React (Basic), Custom UI Component System</p>
+                        </div>
+                        <div>
+                            <h3>Backend Development</h3>
+                            <p>PHP, MySQL, Authentication Systems, API Integration (Basic)</p>
+                        </div>
+                        <div>
+                            <h3>Tools & Workflow</h3>
+                            <p>VS Code, Git & GitHub, Netlify, Vercel</p>
+                        </div>
+                        <div>
+                            <h3>Special Skills</h3>
+                            <p>Website Cloning & Redesign, Full Website Development, Performance Optimization, Bug Fixing, Clean Code Structure, Custom Tool Development (CSS Checker, Block Capture System)</p>
+                        </div>
+                        <div>
+                            <h3>Professional Skills</h3>
+                            <p>Team Management (10+ Designers), Client Communication, Project Planning, Problem Solving, Freelancing Ready</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Languages Section -->
+                <section class="section languages">
+                    <h2>Language</h2>
+                    <ul>
+                        <li>English</li>
+                        <li>Hindi</li>
+                    </ul>
+                </section>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main">
+                <!-- Header -->
+                <header>
+                    <h1>Sandeep Kumar</h1>
+                    <p>UI/UX Designer, Web Designer, and Website Designer</p>
+                </header>
+
+                <!-- About Me Section -->
+                <section class="section about">
+                    <h2>About Me</h2>
+                    <p>
+                        I am <span>Sandeep Kumar</span>, a passionate <span>UI/UX Designer, Web Designer, and Website Designer</span> with expertise in crafting intuitive and visually appealing digital experiences. I have a strong background in <span>React and PHP</span>, allowing me to build dynamic, scalable, and user-friendly web applications.
+                    </p>
+                    <p>
+                        I have also worked with <span>HTML, CSS, JavaScript, and basic PHP</span>, and I regularly use tools like <span>Webflow, Figma, and Framer</span> to design and develop modern interfaces. I continuously learn new skills to stay updated and improve my work.
+                    </p>
+                </section>
+
+                <!-- Experience Section -->
+                <section class="section experience">
+                    <h2>Work Experience</h2>
+                    <div class="job">
+                        <div class="job-header">
+                            <h3>Web Designer – Aliens Company</h3>
+                            <span class="badge">2023 – Present</span>
+                        </div>
+                        <div class="job-details">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <a href="https://www.google.com/maps/search/?api=1&amp;query=Gurugram+Haryana+122003+India" target="_blank" rel="noopener noreferrer">Gurugram, Haryana 122003, India</a>
+                            </div>
+                            <div>
+                                <span style="width: 6px; height: 6px; border-radius: 50%; background-color: #10b981; display: inline-block;"></span>
+                                <span>Role: Full-time</span>
+                            </div>
+                        </div>
+                        <div class="tech-stack">
+                            <span>Tech Stack:</span>
+                            <span>HTML, CSS, JavaScript, PHP</span>
+                        </div>
+                        <ul>
+                            <li>Developed and maintained dynamic, responsive web applications, primarily focused on e-commerce solutions.</li>
+                            <li>Worked extensively with HTML, CSS, JavaScript, and basic PHP to build and enhance front-end and back-end functionality.</li>
+                            <li>Designed user-centric UI/UX interfaces to enhance user engagement and overall customer experience.</li>
+                            <li>Implemented secure authentication systems and integrated shopping cart functionality for scalable e-commerce platforms.</li>
+                            <li>Utilized Git for version control and deployed front-end projects using Netlify and Vercel.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Projects Section -->
+                <section class="section projects">
+                    <h2>Projects</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                        <div class="job" style="margin-bottom: 0;">
+                            <div class="job-header">
+                                <h3>Exchange Platform</h3>
+                            </div>
+                            <ul>
+                                <li>Crypto exchange type system</li>
+                                <li>Trading UI design & dashboard</li>
+                                <li>User authentication & wallet integration</li>
+                            </ul>
+                        </div>
+
+                        <div class="job" style="margin-bottom: 0;">
+                            <div class="job-header">
+                                <h3>NFT Marketplace</h3>
+                            </div>
+                            <ul>
+                                <li>NFT listing and buying system</li>
+                                <li>Wallet connect functionality</li>
+                                <li>Modern UI/UX design</li>
+                            </ul>
+                        </div>
+
+                        <div class="job" style="margin-bottom: 0;">
+                            <div class="job-header">
+                                <h3>Wallet System</h3>
+                            </div>
+                            <ul>
+                                <li>User wallet management</li>
+                                <li>Balance tracking & transactions</li>
+                                <li>Secure authentication system</li>
+                            </ul>
+                        </div>
+
+                        <div class="job" style="margin-bottom: 0;">
+                            <div class="job-header">
+                                <h3>Swap System</h3>
+                            </div>
+                            <ul>
+                                <li>Token swap interface</li>
+                                <li>Real-time calculation logic</li>
+                                <li>Clean and responsive UI</li>
+                            </ul>
+                        </div>
+
+                        <div class="job" style="margin-bottom: 0;">
+                            <div class="job-header">
+                                <h3>Lawyer Platform</h3>
+                            </div>
+                            <ul>
+                                <li>Lawyer profile listing</li>
+                                <li>Appointment booking system</li>
+                                <li>User-friendly interface</li>
+                            </ul>
+                        </div>
+
+                        <div class="job" style="margin-bottom: 0;">
+                            <div class="job-header">
+                                <h3>Doctor Appointment System</h3>
+                            </div>
+                            <ul>
+                                <li>Doctor listing & booking</li>
+                                <li>Patient management system</li>
+                                <li>Clean dashboard UI</li>
+                            </ul>
+                        </div>
+
+                        <div class="job" style="margin-bottom: 0;">
+                            <div class="job-header">
+                                <h3>E-Commerce Website</h3>
+                            </div>
+                            <ul>
+                                <li>Product listing, cart, checkout</li>
+                                <li>Authentication system</li>
+                                <li>Responsive design</li>
+                            </ul>
+                        </div>
+
+                        <div class="job" style="margin-bottom: 0;">
+                            <div class="job-header">
+                                <h3>Portfolio Website</h3>
+                            </div>
+                            <ul>
+                                <li>Personal portfolio</li>
+                                <li>Modern UI/UX</li>
+                                <li>Fully responsive</li>
+                            </ul>
+                        </div>
+
+                        <div class="job" style="margin-bottom: 0;">
+                            <div class="job-header">
+                                <h3>Custom UI Component System</h3>
+                            </div>
+                            <ul>
+                                <li>Reusable UI components</li>
+                                <li>Faster development workflow</li>
+                                <li>Design consistency</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Print Instructions -->
+        <div class="print-instructions">
+            Press <kbd style="background-color: white; border: 1px solid #d1d5db; border-radius: 0.25rem; padding: 0.125rem 0.25rem;">Ctrl + P</kbd> to save as PDF
+        </div>
+    </div>
+
+
+
+</body></html>
