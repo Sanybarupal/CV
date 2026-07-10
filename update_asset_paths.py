@@ -1,19 +1,25 @@
-import glob
+import re
 
-files = glob.glob("*.html")
-old_mgsu = "https://upload.wikimedia.org/wikipedia/en/thumb/5/52/Maharaja_Ganga_Singh_University_logo.png/220px-Maharaja_Ganga_Singh_University_logo.png"
+with open('index.html', 'r', encoding='utf-8') as f:
+    content = f.read()
 
-for filename in files:
-    with open(filename, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # Replace aliens logo
-    content = content.replace('src="aliens-logo.png"', 'src="assets/aliens-logo.png"')
-    
-    # Replace mgsu logo
-    content = content.replace('src="' + old_mgsu + '"', 'src="assets/mgsu-logo.png"')
-    
-    with open(filename, 'w', encoding='utf-8') as f:
-        f.write(content)
-        
-print("Updated asset paths in all HTML files.")
+# Replace Unsplash URLs with local paths
+content = content.replace("url('https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&q=80&w=1000')", "url('assets/images/hire-professional.png')")
+content = content.replace("url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1000')", "url('assets/images/docsapp.png')")
+
+# Also, update background position to top left if it's a screenshot, or contain/cover properly. 
+# Screenshots often look better with background-position: top center; so it shows the top header.
+# Let's adjust the style string
+old_style_1 = "aspect-ratio: 16/9; background: url('assets/images/hire-professional.png') center/cover;"
+new_style_1 = "aspect-ratio: 16/9; background: url('assets/images/hire-professional.png') top center/cover no-repeat;"
+
+old_style_2 = "aspect-ratio: 16/9; background: url('assets/images/docsapp.png') center/cover;"
+new_style_2 = "aspect-ratio: 16/9; background: url('assets/images/docsapp.png') top center/cover no-repeat;"
+
+content = content.replace(old_style_1, new_style_1)
+content = content.replace(old_style_2, new_style_2)
+
+
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(content)
+print("Updated images to real project screenshots.")
