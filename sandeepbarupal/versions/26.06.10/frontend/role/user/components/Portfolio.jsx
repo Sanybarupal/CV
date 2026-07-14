@@ -21,27 +21,27 @@ const Portfolio = () => {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '40px' }}>
                     {projects.map((project, i) => (
                         <div key={i} className="card glass" style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '0', overflow: 'hidden' }}>
-                            <div style={{ height: '200px', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <i className="fa-regular fa-image" style={{ fontSize: '48px', color: 'rgba(255,255,255,0.1)' }}></i>
+                            <div style={{ height: '220px', background: 'rgba(255,255,255,0.05)', position: 'relative', overflow: 'hidden' }}>
+                                <img 
+                                    src={`https://picsum.photos/seed/${i + 15}/800/600`} 
+                                    alt={project.name} 
+                                    style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s' }} 
+                                    onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.08)'}
+                                    onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                                />
                             </div>
                             <div style={{ padding: '30px', flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
-                                    <h3 style={{ fontSize: '1.2rem', margin: 0 }}>{project.name}</h3>
+                                    <h3 style={{ fontSize: '1.2rem', margin: 0, color: '#fff' }}>{project.name}</h3>
                                     <span style={{ fontSize: '0.8rem', color: '#10b981', background: 'rgba(16, 185, 129, 0.1)', padding: '4px 10px', borderRadius: '10px' }}>{project.category}</span>
                                 </div>
                                 <p style={{ color: '#a0a0a0', marginBottom: '20px', flexGrow: 1, lineHeight: '1.6' }}>{project.desc}</p>
                                 
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginBottom: '25px' }}>
+                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                                     {project.tech.map((t, j) => (
                                         <span key={j} style={{ fontSize: '0.8rem', padding: '4px 10px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '10px', color: '#a0a0a0' }}>{t}</span>
                                     ))}
                                 </div>
-                                
-                                <div style={{ display: 'flex', gap: '15px' }}>
-                                    <button className="btn btn-white" style={{ padding: '12px', flex: 1, fontSize: '14px' }}>Live Demo</button>
-                                    <button className="btn btn-white-outline" style={{ padding: '12px', marginTop: 0, flex: 1, fontSize: '14px' }}>GitHub</button>
-                                </div>
-                                <button className="btn btn-white-outline" style={{ width: '100%', marginTop: '15px', border: 'none', background: 'rgba(255,255,255,0.05)', color: '#fff' }}>Read Case Study</button>
                             </div>
                         </div>
                     ))}

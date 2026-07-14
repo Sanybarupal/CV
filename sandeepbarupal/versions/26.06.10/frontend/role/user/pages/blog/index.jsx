@@ -1,12 +1,12 @@
 import React from 'react';
-import Plan from '../../components/Plan';
+import Blog from '../../components/Blog';
 
-const PlanPage = () => {
+const BlogPage = () => {
     return (
         <div style={{ width: '100%', overflowX: 'hidden', minHeight: '100vh', paddingTop: '80px' }}>
-            <Plan />
+            <Blog />
         </div>
     );
 };
 
-export default PlanPage;
+export default BlogPage;

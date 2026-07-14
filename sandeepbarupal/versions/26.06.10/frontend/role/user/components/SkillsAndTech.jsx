@@ -114,14 +114,6 @@ const SkillsAndTech = () => {
         }
     ];
 
-    const expertise = [
-        { title: 'UI/UX Design', icon: 'fa-solid fa-pen-nib', desc: 'Designing intuitive and user-centered interfaces.' },
-        { title: 'Web Design', icon: 'fa-solid fa-desktop', desc: 'Crafting pixel-perfect layouts.' },
-        { title: 'Frontend Development', icon: 'fa-solid fa-code', desc: 'Building responsive web applications.' },
-        { title: 'WordPress Development', icon: 'fa-brands fa-wordpress', desc: 'Custom CMS solutions.' },
-        { title: 'Dashboard Design', icon: 'fa-solid fa-chart-pie', desc: 'Complex data visualization.' },
-        { title: 'Landing Pages', icon: 'fa-solid fa-rocket', desc: 'High-converting sales pages.' }
-    ];
 
     return (
         <section className="skills-section" style={{ padding: '80px 20px', position: 'relative', zIndex: 1 }}>
@@ -153,26 +145,7 @@ const SkillsAndTech = () => {
                     </div>
                 </div>
 
-                {/* Expertise */}
-                <div>
-                    <h2 style={{ fontSize: '1.5rem', marginBottom: '40px', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                        My Expertise
-                    </h2>
-                    
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-                        {expertise.map((item, i) => (
-                            <div key={i} className="card glass" style={{ padding: '30px', display: 'flex', gap: '20px', alignItems: 'flex-start', transition: 'transform 0.3s', border: '1px solid rgba(255,255,255,0.05)' }}>
-                                <div style={{ width: '50px', height: '50px', borderRadius: '15px', background: 'rgba(37,99,235,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                                    <i className={item.icon} style={{ fontSize: '24px', color: '#3b82f6' }}></i>
-                                </div>
-                                <div>
-                                    <h3 style={{ fontSize: '1.2rem', margin: '0 0 10px 0', color: '#fff' }}>{item.title}</h3>
-                                    <p style={{ color: '#a0a0a0', margin: 0, fontSize: '0.9rem', lineHeight: '1.6' }}>{item.desc}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+
 
             </div>
         </section>
